@@ -8,4 +8,13 @@ public class HeroStrength extends Hero {
         super(nama, health, attackPower);
         this.tipe = tipe;
     }
+
+    @Override
+    public void display(){
+        super.display();
+        System.out.println("Tipe: " + this.tipe);
+    }
+    public void terimaSerangan(double damage){
+        this.health -= (0.5 * damage);
+    }
 }
