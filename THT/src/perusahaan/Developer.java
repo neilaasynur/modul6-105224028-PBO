@@ -44,6 +44,7 @@ public class Developer extends Karyawan {
         // validasi bonus hanya untuk developer dengan rating di atas 3.0
         if (getRatingKinerja() >= 3.0){
             bonusBug = 50000 * jumlahBugFix;
+            System.out.println(">> Mendapatkan bonus berdasarkan jumlah bug karena rating di atas Syarat!");
         }
         return gaji + tunjanganLevel + bonusBug;
     }

@@ -17,6 +17,7 @@ public class Manajer extends Karyawan {
         double bonus = 0.0;
         if (getRatingKinerja() >= 4.5){
             bonus = (gaji + tunjanganMaterial) * 0.15;
+            System.out.println(">> Mendapatkan bonus karena rating di atas Syarat!");
         }
         return gaji + tunjanganMaterial + bonus;
     }

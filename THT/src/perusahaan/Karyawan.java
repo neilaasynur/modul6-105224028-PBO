@@ -50,6 +50,7 @@ public class Karyawan {
         if (ratingKinerja < 2.5){
             //jika dibawah syarat, maka akan dikenakan pinelti
             pinalti = (gajiPokok + bonus) * 0.1;
+            System.out.println(">> Mendapatkan pinalti karena rating berada dibawah Syarat!");
         }
         double gajiTotal = gajiPokok + bonus - pinalti;
         return gajiTotal;
