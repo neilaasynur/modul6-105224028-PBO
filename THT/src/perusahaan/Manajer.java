@@ -1,7 +1,7 @@
 package perusahaan;
 
 public class Manajer extends Karyawan {
-    //
+    //atribut yang dibutuhkan untuk kelas manajer
     private String divisi;
     private int jumlahAnggotaTim;
 
@@ -15,9 +15,10 @@ public class Manajer extends Karyawan {
         double gaji  = super.hitungGajiTotal();
         double tunjanganMaterial = 300000 * jumlahAnggotaTim;
         double bonus = 0.0;
+        // validasi bonus hanya untuk manajer dengan rating di atas 4.5
         if (getRatingKinerja() >= 4.5){
             bonus = (gaji + tunjanganMaterial) * 0.15;
-            System.out.println(">> Mendapatkan bonus karena rating di atas Syarat!");
+            System.out.println(">> Mendapatkan bonus tunjangan material karena rating di atas Syarat!");
         }
         return gaji + tunjanganMaterial + bonus;
     }

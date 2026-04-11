@@ -14,7 +14,7 @@ public class Karyawan {
         this.nama = nama;
         this.tahunMasuk = tahunMasuk;
         this.gajiPokok = gajiPokok;
-        this.ratingKinerja = ratingKinerja;
+        setRatingKinerja(ratingKinerja);
     }
     //getter untuk seluruh atribut
     public String getIsKaryawan() {
@@ -47,8 +47,8 @@ public class Karyawan {
         double bonus  = gajiPokok * 0.05 * masaKerja;
         double pinalti = 0.0;
         //melakukan validasi rating dibawah 2.5
-        if (ratingKinerja < 2.5){
-            //jika dibawah syarat, maka akan dikenakan pinelti
+        if (this.ratingKinerja < 2.5){
+            //jika dibawah syarat, maka akan dikenakan pinalti
             pinalti = (gajiPokok + bonus) * 0.1;
             System.out.println(">> Mendapatkan pinalti karena rating berada dibawah Syarat!");
         }
@@ -57,7 +57,7 @@ public class Karyawan {
     }
     //fungsi untuk menampilkan seluruh informasi karyawan
     public void displayInfo(){
-        System.out.println("ID: " + idKaryawan);
+        System.out.println("\nID: " + idKaryawan);
         System.out.println("Nama: " + nama);
         System.out.println("Tahun Masuk: " + tahunMasuk);
         System.out.println("Rating: " + ratingKinerja);
