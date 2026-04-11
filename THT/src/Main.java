@@ -15,13 +15,13 @@ public class Main {
         String namaKaryawan = " ";
         double TotalRating = 0.0;
         //membuat array menyimpan objek
-        Karyawan [] ListKaryawan = new Karyawan[5];
+        ArrayList<Karyawan> ListKaryawan = new ArrayList<>();
         //mengisi array dengan objek karyawan
-        ListKaryawan[0] = new Karyawan("00000001", "ShaoShang", 2020, 3000000, 2.0);
-        ListKaryawan[1] = new Developer("00000002", "Sang Zhi", 2018, 5000000, 4.0, "Senior", 20);
-        ListKaryawan[2] = new Developer("00000003", "Xi Guang", 2024, 4000000, 2.8, "Mid", 15);
-        ListKaryawan[3] = new Manajer("00000004", "Zheng Suyi", 2015, 8500000, 4.8, "IT", 10);
-        ListKaryawan[4] = new Manajer("00000005", "Wen Yifan", 2025, 5000000, 3.5, "HR", 3);
+        ListKaryawan.add(new Karyawan("00000001", "ShaoShang", 2020, 3000000, 2.0));
+        ListKaryawan.add(new Developer("00000002", "Sang Zhi", 2018, 5000000, 4.0, "Senior", 20));
+        ListKaryawan.add(new Developer("00000003", "Xi Guang", 2024, 4000000, 2.8, "Mid", 15));
+        ListKaryawan.add(new Manajer("00000004", "Zheng Suyi", 2015, 8500000, 4.8, "IT", 10));
+        ListKaryawan.add(new Manajer("00000005", "Wen Yifan", 2025, 5000000, 3.5, "HR", 3));
 
         //perulangan yang berguna untuk menghitung informasi dari setiap karyawan
         for (Karyawan karyawan : ListKaryawan) {
@@ -43,6 +43,6 @@ public class Main {
         //menmapilkan total anggaran yang dibutuhkan, karyawan dengn agaji tertinggi, dan rataan dari rating kinerja karyawan
         System.out.println("\nTotal Anggaran Gaji yang mesti disiapkan: Rp" + anggaran);
         System.out.println("Karyawan dengan gaji bersih paling tinggi: " + namaKaryawan);
-        System.out.println("Rata-rata Rating Kinerja Karyawan: " + (TotalRating / ListKaryawan.length));
+        System.out.println("Rata-rata Rating Kinerja Karyawan: " + (TotalRating / ListKaryawan.size()));
     }
 }
